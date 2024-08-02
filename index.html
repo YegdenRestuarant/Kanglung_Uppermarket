@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEGDEN RESTAURANT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>YEGDEN RESTAURANT</h1>
+        <div class="header-container">
+            <button id="home-button" onclick="showHomeView()">Home</button>
+            <button id="owner-button" onclick="toggleOwnerPassword()">Owner</button>
+            <div id="owner-password" style="display: none;">
+                <input type="password" id="password-input" placeholder="Enter password">
+                <button onclick="validatePassword()">Submit</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home View -->
+        <div id="home-view">
+            <div id="menu-items"></div>
+        </div>
+
+        <!-- Owner View -->
+        <div id="owner-view" style="display: none;">
+            <h2>Manage Menu</h2>
+            <div id="owner-menu-items"></div>
+            <h3>Add New Menu Item</h3>
+            <input type="text" id="food-name" placeholder="Food Name">
+            <input type="number" id="food-price" placeholder="Price">
+            <input type="file" id="food-image">
+            <button onclick="addMenuItem()">Add Item</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Free Service delivery from Lower to Upper market. Contact us 17651798</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
